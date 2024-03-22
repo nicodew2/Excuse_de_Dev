@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block body %}
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+        <h1>Excuse du jour :</h1>
+        <p>{{ excuse.message }}</p>
+        <a href="{{ path('app_http_code', {'code': excuse.httpCode}) }}" class="btn btn-primary">
+            Générer une Excuse
+        </a>
+
+        {# Ajout du bouton pour exporter les données #}
+        <a href="{{ path('app_export') }}" class="btn btn-secondary">
+            Exporter les données en CSV
+        </a>
+    </div>
+</body>
+
+{% endblock %}
+

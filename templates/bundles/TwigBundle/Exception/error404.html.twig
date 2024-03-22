@@ -1,0 +1,15 @@
+{# templates/error404.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Page introuvable{% endblock %}
+
+{% block body %}
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+        <h1>Oops! Page introuvable</h1>
+        <p>Désolé, la page que vous recherchez est introuvable.</p>
+        <a href="{{ path('app_home') }}">retour a la page accueil</a>
+    </div>
+</body>
+{% endblock %}

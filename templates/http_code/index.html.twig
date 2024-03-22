@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page Erreur{{ excuse.httpCode }} {% endblock %}
+
+{% block body %}
+
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+        <p>Erreur {{ excuse.httpCode }}</p>
+        <p>{{ excuse.tag }}</p>
+        <p>{{ excuse.message }}</p>
+       <a href="{{ path('app_home') }}">retour a la page accueil</a>
+    </div>
+</body>
+
+{% endblock %}

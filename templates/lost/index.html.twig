@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Je suis perdu{% endblock %}
+
+{% block body %}
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="text-center">
+        <h1>Je suis perdu</h1>
+        <img src="img/2rM.gif" class="img-fluid">
+        <p>Vous serez redirigé vers la page d'accueil dans 5 secondes...</p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            // Rediriger vers une autre page après 5 secondes en utilisant l'URL générée par Symfony
+            window.location.href = "{{ path('app_home') }}";
+        }, 5000); // 5000 ms = 5 secondes
+    </script>
+</body>
+  
+{% endblock %}
