@@ -12,12 +12,11 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $data = require 'src/Data/data.php'; // Assurez-vous que le chemin vers votre fichier data.php est correct
-
+        $data = require 'src/Data/data.php'; // chemin vers votre fichier data.php 
+        //créer les fixture pour remplir la base de donnée
         foreach ($data as $item) {
             $phrase = new ListeExcuse();
-            $phrase->setHttpCode($item['http_code']); // Assurez-vous que les noms des clés sont corrects
-            $phrase->setTag($item['tag']);
+            $phrase->setHttpCode($item['http_code']); 
             $phrase->setMessage($item['message']);
             $manager->persist($phrase);
         }

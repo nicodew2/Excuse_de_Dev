@@ -14,7 +14,7 @@ class HttpCodeController extends AbstractController
     {
          // Récupérer une excuse au hasard depuis le repository
          $excuse = $excuseRepository->getRandomExcuse();
-        return $this->render('http_code/index.html.twig', [
+        return $this->render('http_code/code.html.twig', [
             'excuse' => $excuse,
         ]);
     }

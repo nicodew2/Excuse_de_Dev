@@ -1,6 +1,6 @@
 <?php
 
-// data.php
+// liste des excuse a entrer en base de donnée
 
 return [
     

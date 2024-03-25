@@ -11,7 +11,8 @@ class LostController extends AbstractController
     #[Route('/lost', name: 'app_lost')]
     public function index(): Response
     {
-        return $this->render('lost/index.html.twig', [
+        //retourne la page lost
+        return $this->render('lost/lost.html.twig', [
             'controller_name' => 'LostController',
         ]);
     }
